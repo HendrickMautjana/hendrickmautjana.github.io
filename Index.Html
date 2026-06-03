@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecturer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <!-- FRONT -->
+  <section id="front" class="card-face">
+    <header>
+      <h1>Mr. Nkululeko Lekokoane</h1>
+      <p>Lecturer | Computer Science</p>
+    </header>
+
+    <img src="Nkululeko.webp" 
+         alt="Lecturer Profile Image" class="profile-img">
+
+    <div class="lecturer-avatar">
+      <svg width="200" height="200" viewBox="0 0 200 200">
+        <circle cx="100" cy="70" r="50" fill="#ffe0bd" stroke="#333" stroke-width="3"/>
+        <circle cx="80" cy="70" r="15" fill="none" stroke="#333" stroke-width="3"/>
+        <circle cx="120" cy="70" r="15" fill="none" stroke="#333" stroke-width="3"/>
+        <line x1="95" y1="70" x2="105" y2="70" stroke="#333" stroke-width="3"/>
+        <path d="M75 95 Q100 120 125 95" stroke="#333" stroke-width="3" fill="none"/>
+        <rect x="60" y="120" width="80" height="60" fill="#2980b9" rx="10"/>
+        <polygon points="100,120 90,160 110,160" fill="#e74c3c"/>
+      </svg>
+    </div>
+
+ <h2>Quick Access QR</h2>
+<a href="https://hendrickmautjana.github.io/INL261_PROJECT" target="_blank">
+  <img src="download (1).png" alt="QR Code" class="qr-code">
+</a>
+
+
+
+<!-- GitHub link will be injected here -->
+<div id="github-link"></div>
+
+
+
+    <button onclick="showBack()">View Details</button>
+  </section>
+
+  <!-- BACK -->
+  <section id="back" class="card-face hidden">
+
+    <!-- Navigation -->
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('portfolio')">Portfolio</button>
+    <button onclick="showSection('contact')">Contact</button>
+
+    <!-- ABOUT -->
+    <div id="about" class="section hidden">
+      <h2>About Me</h2>
+      <p><strong>Name:</strong> Mr. Nkululeko Lekokoane</p>
+      <p><strong>Tagline:</strong> Empowering Deaf students through accessible coding education.</p>
+      <p><strong>Philosophy:</strong> Inclusive, visual, and practical teaching.</p>
+      <p><strong>Superpower:</strong> Making complex coding simple.</p>
+      <button onclick="hideSection('about')">Close</button>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="portfolio" class="section hidden">
+      <h2>Portfolio</h2>
+      <ul>
+        <li>DBD261 & DBD262</li>
+        <li>DBR261</li>
+        <li>10+ years teaching</li>
+      </ul>
+      <button onclick="hideSection('portfolio')">Close</button>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section hidden">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:dr.john.doe@belgiumcampus.ac.za">dr.john.doe@belgiumcampus.ac.za</a></p>
+      <button onclick="showMessage()">Click Me</button>
+      <p id="message"></p>
+      <button onclick="hideSection('contact')">Close</button>
+    </div>
+
+    <footer>
+      <p>© 2026 Lecturer Portfolio</p>
+    </footer>
+
+    <button onclick="showFront()">Back to Front</button>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
